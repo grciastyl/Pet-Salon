@@ -1,0 +1,65 @@
+/* global */
+
+
+/* header */
+
+header{
+    background-image: url(petsheader.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 3%;
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+
+nav{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;  
+    color: black;
+    
+}
+
+
+/* main*/
+
+main{
+    background-image: url(petsbackground.jpg);
+    background-repeat:round;
+
+}
+.textbackground{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    border: 2px;
+    margin: 10% 40%;
+    padding: 1px;
+    border-color: black;
+    border-style: solid;
+}
+/* footer */
+
+footer{
+    background-image: url(petsfooter.jpg);
+    background-position: center;
+    background-size:30%;
+    height: 10vh;
+    padding: 3%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+.footernav{
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+}
