@@ -1,41 +1,55 @@
-console.log("register");
-// list of pets
-let pet1 = {
-    name:"Aspen",
-    age:"5",
-    gender:"f",
-    service:"bath",
-    breed:"malinois",
-}
-let pet2 = {
-    name:"Mittens",
-    age:"9",
-    gender:"f",
-    service:"nails",
-    breed:"cat",
-}
-let pet3 = {
-    name:"Bella",
-    age:"13",
-    gender:"f",
-    service:"groom",
-    breed:"chihuahua",
+let pets=[];
+
+
+let inputName = document.getElementById("txtName");
+let inputAge = document.getElementById("txtAge");
+let inputGender = document.getElementById("txtGender");
+let inputBreed = document.getElementById("txtBreed");
+let inputService = document.getElementById("txtService");
+let inputType = document.getElementById("txtType");
+
+//creating the obj constructor
+function Pet(name,age,gender,breed,service,type){
+    this.name=name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.service=service;
+    this.type=type;
 }
 
-//getting total amount of pets and displaying on HTML
-let petsList=[];
-petsList.push(pet1,pet2,pet3);
-document.getElementById("totalpets").innerHTML="Total Pets:"+petsList.length;
+function register(){
+    let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value)
+    pets.push(newPet);
+    console.log(newPet);
+    alert("The registration was successful!!!");
+    displayInfo();
+    clearForm();
 
-//function to list pets names
-function getPetNames(){
-    let list = document.getElementById("petsList")//defining variable (list) and referencing html
-    for(let i=0;i<petsList.length;i++){//for loop parameters
-        console.log(`pets names: ${petsList[i].name}`);//displaying pets names on console
-        list.innerHTML+=`<li>${petsList[i].name}</li>`;//displaying pets names on html at "petsList"
-    }
+}
+function displayInfo(){
+    document.getElementById("info").innerHTML=`<p>Total number of pets: ${pets.length}</p>`
 }
 
-getPetNames()//recalling function to run
+function clearForm(){
+    document.getElementById("txtName").value="";
+    document.getElementById("txtAge").value="";
+    document.getElementById("txtGender").value="";
+    document.getElementById("txtBreed").value="";
+    document.getElementById("txtService").value="";
+    document.getElementById("txtType").value="";
+
+}
 
 
+function init( ){
+    //create objs
+    let pet1 = new Pet("Scooby",99,"Male", "Dane");
+    let pet2 = new Pet("Scrappy",99, "Male", "Mixed")
+    let pet3 = new Pet("Tweety Bird",99, "Male", "Canarian")
+    pets.push(pet1,pet2,pet3);
+    console.log(pets);
+}
+displayInfo();
+
+window.onload=init;  //render the HTML
