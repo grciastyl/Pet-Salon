@@ -60,14 +60,38 @@
                 <button class="btn btn-primary" onclick="register()">Register</button>
             </div>
         </div>
+
         <div id="info">
-            <p>Total pets: 3</p>
+            <p></p>
             </div>
+
+            
+            <div>
+                <h2>Registered pets</h2>
+                <div>
+                    <table class="table table-success table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Breed</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="petList">
+                            <!-- Here the rows are displayed -->
+                        </tbody>
+                    </table>
+                </div>
     </main>
 
     <footer>
         
     </footer>
+    <script src="./scripts/display.js"></script>
     <script src="./scripts/register.js"></script>
 </body>
 </html>

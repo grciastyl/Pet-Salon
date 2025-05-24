@@ -20,16 +20,29 @@ function Pet(name,age,gender,breed,service,type){
 
 function register(){
     let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputBreed.value,inputService.value,inputType.value)
+    if(isValid(newPet)){
     pets.push(newPet);
-    console.log(newPet);
-    alert("The registration was successful!!!");
     displayInfo();
     clearForm();
+    displayRow();// change this to display row
+    }else{
+        alert("Please fill out all fields!");
+    }
+}
 
+function isValid(aPet){
+    let validation = true; //everything is good
+
+    if(aPet.name ===""){
+        validation=false;//something is wrong
+    }
+    if(aPet.gender ===""){
+        validation=false;
+    }
+    return validation;
 }
-function displayInfo(){
-    document.getElementById("info").innerHTML=`<p>Total number of pets: ${pets.length}</p>`
-}
+    
+
 
 function clearForm(){
     document.getElementById("txtName").value="";
@@ -44,12 +57,12 @@ function clearForm(){
 
 function init( ){
     //create objs
-    let pet1 = new Pet("Scooby",99,"Male", "Dane");
-    let pet2 = new Pet("Scrappy",99, "Male", "Mixed")
-    let pet3 = new Pet("Tweety Bird",99, "Male", "Canarian")
+    let pet1 = new Pet("Scooby",9,"Male", "Dane");
+    let pet2 = new Pet("Scrappy",6, "Female", "Mixed")
+    let pet3 = new Pet("Tweety Bird",12, "Male", "Canarian")
     pets.push(pet1,pet2,pet3);
     console.log(pets);
 }
-displayInfo();
+
 
 window.onload=init;  //render the HTML
