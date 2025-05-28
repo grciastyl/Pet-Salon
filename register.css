@@ -5,12 +5,9 @@
 
 header{
     background-image: url(petsheader.webp);
-    background-size: cover;
+    background-size:65%;
     background-position: center;
     padding: 3%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
 }
 
 
@@ -22,21 +19,32 @@ nav{
 
 a{
     text-decoration: none;  
-    color: black;
-    
+    color: Black;
+}
+.container-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 /* main*/
 
 main{
-    background-image: url(petsbackground.jpg);
-    background-repeat:round;
-
+    background-color: white;
+    border-style: double;
+    border-color: black;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
+
+body{
+    background-image: url(petsbackground.jpg);
+    background-repeat:round;background-size: 10%;
+}
+
 .textbackground{
-    display: flex;
-    flex-direction: column;
+    
     background-color: white;
     align-items: center;
     border: 2px;
@@ -45,21 +53,32 @@ main{
     border-color: black;
     border-style: solid;
 }
+
+
 /* footer */
 
 footer{
     background-image: url(petsfooter.jpg);
-    background-position: center;
-    background-size:30%;
-    height: 10vh;
+    background-size:21%;
+    height: 14vh;
     padding: 3%;
     text-decoration: none;
-    display: flex;
-    justify-content: space-between;
+
 
 }
 .footernav{
     display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+
+.footer-title{
+    background-color: lightgreen;
+    display: inline-block
+    ;
+
+}
+.footer-link{
+    background-color: lightgreen;
 }

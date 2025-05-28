@@ -4,16 +4,14 @@ function displayRow(){
     // let card="";
 for(let i=0;i<pets.length;i++){
     result+=`
-    
-    
-            <tr>
+            <tr id="${i}">
                 <td>${pets[i].name}</td>
                 <td>${pets[i].age}</td>
                 <td>${pets[i].gender}</td>
                 <td>${pets[i].breed}</td>
                 <td>${pets[i].service}</td>
                 <td>${pets[i].type}</td>
-                <td button type="button" class="btn btn-danger">Delete</td button>
+                <td><button type="button" class="btn btn-danger" onclick="deletePet(${i})">Delete</td></button>
             </tr>
     `;
 }

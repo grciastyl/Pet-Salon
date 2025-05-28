@@ -24,7 +24,7 @@ function register(){
     pets.push(newPet);
     displayInfo();
     clearForm();
-    displayRow();// change this to display row
+    displayRow();
     }else{
         alert("Please fill out all fields!");
     }
@@ -42,6 +42,12 @@ function isValid(aPet){
     return validation;
 }
     
+function deletePet(petIndex){
+    console.log("Delete Pet" +petIndex)
+    document.getElementById(petIndex).remove();
+    pets.splice(petIndex, 1);
+    displayRow();
+}
 
 
 function clearForm(){
@@ -57,9 +63,9 @@ function clearForm(){
 
 function init( ){
     //create objs
-    let pet1 = new Pet("Scooby",9,"Male", "Dane");
-    let pet2 = new Pet("Scrappy",6, "Female", "Mixed")
-    let pet3 = new Pet("Tweety Bird",12, "Male", "Canarian")
+    let pet1 = new Pet("Scooby",9,"Male", "Dane","Yes","Trim");
+    let pet2 = new Pet("Scrappy",6, "Female", "Mixed","Yes","Groom")
+    let pet3 = new Pet("Tweety Bird",12, "Male", "Canarian","Yes","Coloring")
     pets.push(pet1,pet2,pet3);
     console.log(pets);
 }
