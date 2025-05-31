@@ -1,0 +1,44 @@
+/* global */
+@media(max-width:768px){
+    main{
+        background-color: aqua;
+        align-items: center;
+        background-image: none;
+    }
+}
+
+/* header */
+
+/* main */
+main{
+    background-image: url(pink\ towel.png);
+    background-repeat: round;
+    background-size: 20%;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(128, 187, 128);
+}
+
+img{
+    max-height: 50vh;
+}
+.mb-3{
+    border-style: double;
+    border-color: black;
+    
+}
+.form-container{
+    align-items: center;
+    margin:30px;
+    width: auto;
+}
+
+.col{
+    padding: 0 20% ;
+}
+.text{
+    background-color: white;
+}
+/* footer */
