@@ -1,0 +1,29 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: blue;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.flex-left{
+    background-color: aquamarine;
+}
+
+img{
+    max-height: 80vh;
+}
+h1{
+    margin: 20px;
+}
+h2{
+    margin: 20px;
+}
+.services-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.services-img{
+    max-height: 80vh;
+}

@@ -49,6 +49,20 @@ function deletePet(petIndex){
     displayRow();
 }
 
+function getServicesNames(){
+    //use the read services[]
+    let servicesList = readServices();//this function is under storeManager
+    let option ="";
+    for(let i=0;i<servicesList.length;i++){//travel the services list
+        let service = servicesList[i];
+        console.log(service);
+        option+=`<option value="${service.title}">${service.title}</option>  `;//create the HTML <option>
+        console.log(option);
+    }
+    //insert into the HTML
+    $("#txtService").append(option)
+}
+
 
 function clearForm(){
     document.getElementById("txtName").value="";
@@ -68,6 +82,7 @@ function init( ){
     let pet3 = new Pet("Tweety Bird",12, "Male", "Canarian","Yes","Coloring")
     pets.push(pet1,pet2,pet3);
     console.log(pets);
+    getServicesNames();
 }
 
 

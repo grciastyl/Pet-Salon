@@ -14,6 +14,7 @@ function register(){
     let newService = new Service(inputTitle,inputPrice);
     if(isValid(newService)){
         save(newService);
+        window.location="register.html";
     }
 }
     //validation

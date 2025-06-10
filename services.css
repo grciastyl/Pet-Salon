@@ -12,8 +12,8 @@
 /* main */
 main{
     background-image: url(pink\ towel.png);
-    background-repeat: round;
-    background-size: 20%;
+    background-repeat: repeat-x;
+    background-size: 50%;
 }
 .flex-container{
     display: flex;

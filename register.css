@@ -39,8 +39,8 @@ main{
 }
 
 body{
-    background-image: url(petsbackground.jpg);
-    background-repeat:round;background-size: 10%;
+    /* background-image: url(petsbackground.jpg); */
+    /* background-repeat:round;background-size: 10%; */
 }
 
 .textbackground{
